@@ -14,6 +14,8 @@
 		7B7C155B29AAFE4D00E3742D /* swiftbinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C155A29AAFE4D00E3742D /* swiftbinTests.swift */; };
 		7B7C156529AAFE4D00E3742D /* swiftbinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C156429AAFE4D00E3742D /* swiftbinUITests.swift */; };
 		7B7C156729AAFE4D00E3742D /* swiftbinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C156629AAFE4D00E3742D /* swiftbinUITestsLaunchTests.swift */; };
+		7B7C157429AB023300E3742D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C157329AB023300E3742D /* AppDelegate.swift */; };
+		7BA4D00A29B4422900BA5C9E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA4D00929B4422900BA5C9E /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		7B7C156029AAFE4D00E3742D /* swiftbinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftbinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7C156429AAFE4D00E3742D /* swiftbinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftbinUITests.swift; sourceTree = "<group>"; };
 		7B7C156629AAFE4D00E3742D /* swiftbinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftbinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7B7C157329AB023300E3742D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BA4D00929B4422900BA5C9E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				7B7C154829AAFE4C00E3742D /* swiftbinApp.swift */,
+				7B7C157329AB023300E3742D /* AppDelegate.swift */,
 				7B7C154A29AAFE4C00E3742D /* ContentView.swift */,
+				7BA4D00929B4422900BA5C9E /* Utils.swift */,
 				7B7C154C29AAFE4D00E3742D /* Assets.xcassets */,
 				7B7C155129AAFE4D00E3742D /* swiftbin.entitlements */,
 				7B7C154E29AAFE4D00E3742D /* Preview Content */,
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B7C157429AB023300E3742D /* AppDelegate.swift in Sources */,
 				7B7C154B29AAFE4C00E3742D /* ContentView.swift in Sources */,
 				7B7C154929AAFE4C00E3742D /* swiftbinApp.swift in Sources */,
+				7BA4D00A29B4422900BA5C9E /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +432,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Simple Bin";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,6 +462,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Simple Bin";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
