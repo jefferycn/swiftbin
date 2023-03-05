@@ -5,8 +5,6 @@
 //  Created by Jeffery You on 2/25/23.
 //
 
-import Cocoa
-import AppKit
 import SwiftUI
 
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSWindowDelegate {
@@ -14,34 +12,53 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSWindowDele
     var menu: NSMenu!
     var serverUrl: String = ""
     var token: String = ""
+    var window: NSWindow!
     
-    func applicationDidFinishLaunching(_ notification: Notification) {
-        if(configExist()) {
-            NSApplication.shared.windows.first?.setIsVisible(false)
-        }
+    private func initSettingsWindow() {
+        let contentView = ContentView()
+        window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 400, height: 250),
+            styleMask: [.titled, .closable, .miniaturizable],
+            backing: .buffered,
+            defer: false
+        )
+        window.contentView = NSHostingView(rootView: contentView)
+        window.delegate = self
+        window.center()
+        window.makeKeyAndOrderFront(nil)
+        window.setIsVisible(!configExist())
+    }
+    
+    private func initStatusMenu() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         if let button = statusItem.button {
             button.image = NSImage(systemSymbolName: "arrow.up.doc.on.clipboard", accessibilityDescription: nil)
             button.action = #selector(showMenu(_:))
         }
-        
         menu = NSMenu()
-        
         let copyMenuItem = NSMenuItem(title: "Copy", action: #selector(copy(_:)), keyEquivalent: "c")
         let pasteMenuItem = NSMenuItem(title: "Paste", action: #selector(paste(_:)), keyEquivalent: "v")
         let settingsMenuItem = NSMenuItem(title: "Settings", action: #selector(settings(_:)), keyEquivalent: ",")
         let quitMenuItem = NSMenuItem(title: "Quit", action: #selector(quit(_:)), keyEquivalent: "q")
-        
         menu.addItem(copyMenuItem)
         menu.addItem(pasteMenuItem)
         menu.addItem(NSMenuItem.separator())
         menu.addItem(settingsMenuItem)
         menu.addItem(quitMenuItem)
-        
         statusItem.menu = menu
     }
     
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        initSettingsWindow()
+        initStatusMenu()
+    }
+    
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return false
+    }
+    
+    func windowShouldClose(_ sender: NSWindow) -> Bool {
+        sender.setIsVisible(false)
         return false
     }
     
@@ -77,8 +94,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSWindowDele
     }
     
     @objc func settings(_ sender: AnyObject?) {
-        NSApplication.shared.windows.first?.setIsVisible(true)
-        NSApplication.shared.windows.first?.makeKeyAndOrderFront(nil)
+        window.setIsVisible(true)
+        window.makeKeyAndOrderFront(nil)
         NSApplication.shared.activate(ignoringOtherApps: true)
     }
     

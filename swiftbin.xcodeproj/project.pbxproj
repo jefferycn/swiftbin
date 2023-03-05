@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B7C154929AAFE4C00E3742D /* swiftbinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C154829AAFE4C00E3742D /* swiftbinApp.swift */; };
 		7B7C154B29AAFE4C00E3742D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C154A29AAFE4C00E3742D /* ContentView.swift */; };
 		7B7C154D29AAFE4D00E3742D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7C154C29AAFE4D00E3742D /* Assets.xcassets */; };
 		7B7C155029AAFE4D00E3742D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B7C154F29AAFE4D00E3742D /* Preview Assets.xcassets */; };
@@ -16,6 +15,8 @@
 		7B7C156729AAFE4D00E3742D /* swiftbinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C156629AAFE4D00E3742D /* swiftbinUITestsLaunchTests.swift */; };
 		7B7C157429AB023300E3742D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C157329AB023300E3742D /* AppDelegate.swift */; };
 		7BA4D00A29B4422900BA5C9E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA4D00929B4422900BA5C9E /* Utils.swift */; };
+		7BCB757E29B53CD600342D61 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB757D29B53CD600342D61 /* main.swift */; };
+		7BCB758029B53CE600342D61 /* swiftbin in Resources */ = {isa = PBXBuildFile; fileRef = 7BCB757F29B53CE600342D61 /* swiftbin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		7B7C154529AAFE4C00E3742D /* swiftbin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftbin.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B7C154829AAFE4C00E3742D /* swiftbinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftbinApp.swift; sourceTree = "<group>"; };
 		7B7C154A29AAFE4C00E3742D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7B7C154C29AAFE4D00E3742D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B7C154F29AAFE4D00E3742D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		7B7C156629AAFE4D00E3742D /* swiftbinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftbinUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7B7C157329AB023300E3742D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BA4D00929B4422900BA5C9E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		7BCB757D29B53CD600342D61 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7BCB757F29B53CE600342D61 /* swiftbin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = swiftbin; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +101,8 @@
 		7B7C154729AAFE4C00E3742D /* swiftbin */ = {
 			isa = PBXGroup;
 			children = (
-				7B7C154829AAFE4C00E3742D /* swiftbinApp.swift */,
+				7BCB757F29B53CE600342D61 /* swiftbin */,
+				7BCB757D29B53CD600342D61 /* main.swift */,
 				7B7C157329AB023300E3742D /* AppDelegate.swift */,
 				7B7C154A29AAFE4C00E3742D /* ContentView.swift */,
 				7BA4D00929B4422900BA5C9E /* Utils.swift */,
@@ -241,6 +244,7 @@
 			files = (
 				7B7C155029AAFE4D00E3742D /* Preview Assets.xcassets in Resources */,
 				7B7C154D29AAFE4D00E3742D /* Assets.xcassets in Resources */,
+				7BCB758029B53CE600342D61 /* swiftbin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +271,7 @@
 			files = (
 				7B7C157429AB023300E3742D /* AppDelegate.swift in Sources */,
 				7B7C154B29AAFE4C00E3742D /* ContentView.swift in Sources */,
-				7B7C154929AAFE4C00E3742D /* swiftbinApp.swift in Sources */,
+				7BCB757E29B53CD600342D61 /* main.swift in Sources */,
 				7BA4D00A29B4422900BA5C9E /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
